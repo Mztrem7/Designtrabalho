@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultório Médico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Consultório Médico</h1>
+    <main>
+        <details>
+            <summary>Logar</summary>
+
+            <p>Logar - No caso de uso "logar" não há a presença de um ator primário ou secundário, ambos atores dependem igualmente do login, seja para se cadastrar ou acessar o cadastro do cliente. O cliente irá acessar o site, e este lhe pedirá algumas
+                informações pessoais que será enviada ao banco de dados, dando acesso aos outros atores que tomam conta do servidor, secretária, analista e o pediatra.</p>
+
+            <form>
+                <label for="nome" class="label" style="margin-right: 2px;">
+                    Nome:
+                </label>
+                <input type="text" name="nome" class="input" placeholder="Jorge De Souza" autofocus>
+                <br>
+                <label for="email" class="label" style="margin-right: 6px;">
+                Email:
+                </label>
+                <input class="input" type="email" name="email" placeholder="exemplo@exemplo.com" required>
+                <br>
+                <label for="senha" class="label">
+                Senha:
+                </label>
+                <input class="input" type="password" placeholder="*********" required>
+                <br>
+                <label class="label" for="checkbox">Me lembre</label>
+                <input id="marcar" type="checkbox" name="checkbox">
+                <input class="btn" type="submit" value="Entrar">
+                <input class="btn" type="reset" value="Limpar">
+            </form>
+        </details>
+        <details>
+            <summary>Gerir consultas</summary>
+            <p>Aqui o pediatra é o ator primário e o cliente o secundário, o pediatra irá executar a consulta com o cliente que se cadastrou no dia e horário determinado antes da consulta.</p>
+        </details>
+        <details>
+            <summary>Gerir Consultas</summary>
+            <p>Aqui a secretária é a "atriz" primária, e a analista a secundária. Ambas irão acessar o servidor e colocar o horário e o dia da consulta do cliente, com base nos dados fornecidos pelo mesmo. Pode acontecer do pediatra ter algum imprevisto
+                para determinado horário ou dia e tenha de remarcar ou cancelar a consulta, isso será registrado no servidor e a consulta será cancelada.</p>
+        </details>
+        <details>
+            <summary>Cadastrar Consultório</summary>
+            <p> Aqui a secretária é a "atriz" primária, e a analista a secundária. Será estabelecido qual dos três consultórios o pediatra fará seu serviço, e qual consultório o cliente deverá ir. Será colocado no servidor e agendado com os dados do cliente.</p>
+        </details>
+        <details>
+            <summary>Pagar Débitos</summary>
+            <p>O ator principal é o cliente e aqui será debatido sobre a forma de pagamento do mesmo, cartão ou à vista.</p>
+        </details>
+        <details>
+            <summary>Cadastrar Convênio</summary>
+            <p> O ator principal é o cliente. Aqui será debatido se o cliente tiver alguma forma de desconto em seu pagamento, como plano de saúde, e ele deverá cadastrar o convênio para a verificação.</p>
+            <form>
+                <label for="RGHAB">Seu RG</label>
+                <input class="input" type="text" name="RGHAB" pattern="/^[0-9]{2,3}\.?[0-9]{2,3}\.?[0-9]{3}\-?[A-Za-z0-9]{1}$/" placeholder="XXX.XXX.XXX-XX">
+                <br>
+                <label for="CPF">Seu CPF</label>
+                <input class="input" name="CPF" type="text" name="CPF" placeholder="XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                <br>
+                <label for="sus">Numero do cartão do sus</label>
+                <input class="input" name="sus" type="text" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="xxx-xxxx-xxxx-xxxx">
+                <br>
+                <label for="Cert">Certidão e Nascimento</label>
+                <input class="input" name="Cert" type="text" pattern="[0-9]{6}.[0-9]{2}.[0-9]{2}.[0-9{4}.[0-9]{1}.[0-9]{5}.[0-9]{3}.[0-9]{7}.[0-9]{2}" placeholder="xxxxxx.xx.xx.xxxx.x.xxxxx.xxx.xxxxxxx.xx">
+                <br>
+                <label for="Tel">Telefone:</label>
+                <input class="input" type="text" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}" name="Tel" placeholder="(xx) xxxxx-xxxx">
+                <br>
+                <label class="label" for="checkbox">Me lembre</label>
+                <input id="marcar" type="checkbox" name="checkbox">
+                <input class="btn" type="submit" value="Entrar">
+                <input class="btn" type="reset" value="Limpar">
+            </form>
+        </details>
+        <details>
+            <summary>Marcar e Cancelar consultas</summary>
+            <p>O ator principal é o cliente. Aqui, se houver algum imprevisto ou simplesmente o cliente não queira mais fazer a consulta, ele irá registrar isso no servidor e sua consulta será cancelada.</p>
+        </details>
+    </main>
+</body>
+
+</html>
