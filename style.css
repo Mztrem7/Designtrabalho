@@ -107,4 +107,9 @@ details[open] summary::after{
     content: '←';
     margin-left: 5px;
     transition: 0.3s ease-in-out;
+    
+}
+details[open] body{
+    transition: 0.3s ease;
+    background-color: #fefefe;
 }
